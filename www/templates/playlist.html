@@ -1,0 +1,25 @@
+<ion-view title="Playlist">
+  <ion-content class="has-header">
+    <pre ng-if="error">
+      {{error|json}}
+    </pre>>
+
+    <h1>Equipment</h1>
+    {{equipments.length}}
+    <pre>
+      {{equipments|json}}
+    </pre>
+
+    <h1>Events</h1>
+    {{eventCategories.length}}
+    <pre>
+      {{eventCategories|json}}
+    </pre>
+
+    <h1>Activities</h1>
+    {{data.data.data.length}}
+    <pre>
+      {{data|json}}
+    </pre>
+  </ion-content>
+</ion-view>

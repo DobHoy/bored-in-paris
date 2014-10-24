@@ -1,0 +1,15 @@
+<ion-view title="Events">
+  <ion-content class="has-header">
+    <pre ng-if="error">
+      {{error|json}}
+    </pre>
+    >
+    <h1>Events</h1>
+    <ion-list>
+      <ion-item style='border: 1px solid red;' ng-repeat="event in events">
+        <h2 ng-bind-html="event.nom"></h2>
+        <p ng-bind-html="event.small_description"></p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

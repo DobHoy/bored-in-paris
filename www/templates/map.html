@@ -1,0 +1,30 @@
+<ion-view title="Map">
+  <ion-content class="has-header">
+    <pre ng-if="error">
+      {{error|json}}
+    </pre>
+    <div id="map_canvas">
+      <ui-gmap-google-map
+          center="map.center"
+          zoom="map.zoom"
+          >
+        <ui-gmap-markers
+            models="events"
+            idKey="'idactivites'"
+            coords="'position'"
+            click="'onClick'"
+            >
+          <ui-gmap-windows
+              models="events"
+              show="show"
+              >
+              <div ng-non-bindable>{{nom}}
+              </div>
+
+          </ui-gmap-windows>
+
+        </ui-gmap-markers>
+      </ui-gmap-google-map>
+    </div>
+  </ion-content>
+</ion-view>

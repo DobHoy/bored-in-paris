@@ -1,0 +1,13 @@
+<ion-view title="Area of Interest">
+  <ion-content class="has-header">
+    <pre ng-if="error">
+      {{error|json}}
+    </pre>>
+    <h1>Events</h1>
+    <ion-list>
+      <ion-item ng-repeat="universe in model.universes">
+        <a ui-sref="app.map({id: universe.id})">{{universe.name}}</a>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
